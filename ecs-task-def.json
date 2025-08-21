@@ -1,0 +1,20 @@
+{
+  "family": "flash-app-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["EC2"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "flash-app",
+      "image": "047719657408.dkr.ecr.us-east-1.amazonaws.com/flash-app:latest",
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000
+        }
+      ],
+      "essential": true
+    }
+  ]
+}
